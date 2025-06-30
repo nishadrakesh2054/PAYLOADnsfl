@@ -31,6 +31,11 @@ const Match: CollectionConfig = {
       name: 'match_date',
       type: 'date',
       required: true,
+      admin: {
+        date: {
+          pickerAppearance: 'dayAndTime', 
+          displayFormat: 'yyyy-MM-dd',        },
+      },
     },
     {
       name: 'time',

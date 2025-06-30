@@ -48,8 +48,13 @@ type PlayerStatKey = (typeof statCards)[number]["key"];
 const personalInfo = [
   {
     label: "Date of Birth",
-    value: (player: any) => format(new Date(player.dateofbirth), " yyyy"),
+    value: (player: any) => {
+      if (!player.dateofbirth) return "N/A";
+      const date = new Date(player.dateofbirth);
+      return isNaN(date.getTime()) ? "N/A" : format(date, "yyyy");
+    },
   },
+
   {
     label: "Nationality",
     value: (player: any) => player.nationality,

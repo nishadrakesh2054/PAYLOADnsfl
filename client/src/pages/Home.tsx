@@ -1,4 +1,3 @@
-import React from "react";
 import WrittingText from "../components/WrittingText";
 import TeamFixture from "../components/TeamFixture";
 import MatchFixture from "../components/MatchFixture";

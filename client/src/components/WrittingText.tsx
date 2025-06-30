@@ -3,9 +3,8 @@ import { FaStar } from "react-icons/fa";
 
 const headlines = [
   "Welcome to the NEPAL SCHOOL FOOTBALL LEAGUE!",
-  "Watch Live Matches. Anywhere. Anytime.",
-  "Stream All Your Favorite Teams in Action!",
-  "Experience the Thrill of Live Football Streaming.",
+  "Every Match. Every Goal.",
+  " Every Dream — Live and Unmissable.",
 ];
 
 const WrittingText = () => {

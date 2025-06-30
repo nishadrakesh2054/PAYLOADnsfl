@@ -56,6 +56,12 @@ const Team: CollectionConfig = {
       type: 'date',
       required: false,
       label: 'Founded Year',
+      admin: {
+        date: {
+          pickerAppearance: 'dayOnly', // hides time selection
+          displayFormat: 'yyyy', // optional: shows date only
+        },
+      },
     },
     {
       name: 'stadium',

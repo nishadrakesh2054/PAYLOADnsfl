@@ -92,7 +92,7 @@ const TeamCard = ({ team, navigate }: { team: any; navigate: any }) => (
               : "/default-sponsor.png"
           }
           alt={team.team_logo?.alt || team.team_name}
-          className="w-28 h-28 object-contain drop-shadow-lg"
+          className="w-32 h-32 object-contain drop-shadow-lg "
         />
       </div>
       <h2 className="text-2xl font-bold text-white text-center relative z-10">
@@ -104,9 +104,9 @@ const TeamCard = ({ team, navigate }: { team: any; navigate: any }) => (
       <div className="space-y-3">
         {/* Founded */}
         <DetailRow
-          icon={<FaCalendarAlt className="text-blue-500 mt-1 flex-shrink-0" />}
+          icon={<FaCalendarAlt className="text-blue-500 mt-1 flex-shrink-0 " />}
           label="Established"
-          value={team.foundedYear ? format(new Date(team.foundedYear), "MMMM d, yyyy"): "N/A"
+          value={team.foundedYear ? format(new Date(team.foundedYear), " yyyy"): "N/A"
           }
         />
         {/* Stadium */}
@@ -157,8 +157,8 @@ const DetailRow = ({
 }) => (
   <div className="flex items-start">
     {icon}
-    <div className="ml-3">
-      <p className="text-sm text-gray-500">{label}</p>
+    <div className="ml-3 flex flex-column items-center gap-2">
+      <p className="text-sm text-gray-500">{label}:</p>
       <p className="text-gray-700 font-medium">{value}</p>
     </div>
   </div>

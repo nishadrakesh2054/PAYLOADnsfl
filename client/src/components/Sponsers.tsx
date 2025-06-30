@@ -59,13 +59,13 @@ const Sponsors: React.FC = React.memo(() => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#f013ac] tracking-tight relative">
-              VALUABLE SPONSORS
+            <h2 className="text-2xl md:text-3xl font-bold text-[#f013ac] tracking-tight relative text-uppercase">
+            Fueling the future of football.
               <div className="absolute -bottom-4 transform w-32 h-1 bg-gradient-to-r from-[#f013ac] to-[#000000] rounded-full"></div>
             </h2>
             <p className="text-md md:text-md text-gray-800 font-medium max-w-2xl mx-auto leading-relaxed mt-8">
-              Join our growing family of sponsors and be part of the future of
-              football in Nepal
+            NSFL is backed by brands that believe in youth, discipline, and national pride. Join us in building the next generation.
+
             </p>
           </div>
 

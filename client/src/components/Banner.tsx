@@ -29,7 +29,9 @@ const Banner = () => {
           transition={{ duration: 1 }}
           className="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-2xl leading-tight  px-4 text-shadow-lg"
         >
-          Practice Like Never Win! <br /> Perform Like Never Lose.
+          8 Schools. 1 League.
+          <br />
+          Every Dream Counts.
         </motion.h1>
 
         <motion.p
@@ -38,7 +40,8 @@ const Banner = () => {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-md md:text-lg max-w-2xl mb-6"
         >
-          Discover the spirit of the game, powered by passion and unity among school champions.
+          For the first time in Nepal, schools compete in a national league
+          built to discover rising stars and shape tomorrow’s champions.
         </motion.p>
 
         <motion.div
@@ -46,7 +49,10 @@ const Banner = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
-          <Button title="Join the League" onClick={()=>navigate('/register')} />
+          <Button
+            title="Join the League"
+            onClick={() => navigate("/register")}
+          />
         </motion.div>
       </div>
     </div>

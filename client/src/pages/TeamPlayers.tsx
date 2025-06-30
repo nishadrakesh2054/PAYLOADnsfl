@@ -61,15 +61,15 @@ const TeamPlayers = () => {
       <Header team={team} />
       <div className="bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4 py-12">
+          <button
+            onClick={() => navigate("/teams")}
+            className="mr-4 text-blue-700 hover:text-blue-900 sm:block hidden "
+          >
+            <FaArrowLeft size={20} />
+          </button>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <div className="flex items-center mb-4 md:mb-0">
-              <button
-                onClick={() => navigate("/teams")}
-                className="mr-4 text-blue-700 hover:text-blue-900 sm:block hidden"
-              >
-                <FaArrowLeft size={20} />
-              </button>
-              <div className="flex items-center">
+              <div className="flex flex-col md:flex-row items-center md:items-center">
                 <img
                   src={
                     team.team_logo.url
@@ -77,17 +77,20 @@ const TeamPlayers = () => {
                       : "/default-team.png"
                   }
                   alt={`${team.team_name} logo`}
-                  className="w-16 h-16 mr-4"
+                  className="w-28 h-28 mb-4 md:mb-0 md:mr-4 md:w-20 md:h-20"
                 />
-                <div>
+                <div className="text-center md:text-left">
                   <h1 className="text-3xl font-bold text-gray-800">
                     {team.team_name}
                   </h1>
-                  <p>{team.team_details}</p>
-                  <p className="text-gray-600">Stadium: {team.stadium}</p>
+                  <p className="py-2 text-start">{team.team_details}</p>
+                  <p className="text-gray-800 text-start">
+                    <strong>Stadium:</strong> {team.stadium}
+                  </p>
                   {team.foundedYear && (
-                    <p className="text-gray-600">
-                      Established: {format(new Date(team.foundedYear), " yyyy")}
+                    <p className="text-gray-800 text-start">
+                      <strong>Established:</strong>{" "}
+                      {format(new Date(team.foundedYear), " yyyy")}
                     </p>
                   )}
                 </div>
@@ -209,7 +212,10 @@ const PlayerGroup = ({
   navigate: any;
 }) => (
   <div>
-    <h2 className="text-2xl font-bold text-black mb-4">{group.position}s</h2>
+    <h2 className="text-2xl font-bold text-black mb-4 text-capitalize">
+      {" "}
+      {group.position.charAt(0).toUpperCase() + group.position.slice(1)}s
+    </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {group.players.map((player) => (
         <div
@@ -226,7 +232,7 @@ const PlayerGroup = ({
                     : "/default-player.png"
                 }
                 alt={player.name}
-                className="w-full h-52 object-cover rounded-lg"
+                className="w-full h-auto object-cover rounded-lg"
               />
             </div>
             {/* Player Details */}

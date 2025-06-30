@@ -5,11 +5,22 @@ import { PlayerResponse, PlayerByIdResponse } from "../types/players";
 
 export const playerApi = createApi({
   reducerPath: "playerApi",
-  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_API_BASE_URL + "/api", }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: import.meta.env.VITE_API_BASE_URL + "/api",
+  }),
   tagTypes: ["Players"],
   endpoints: (builder) => ({
-    getPlayers: builder.query<PlayerResponse, void>({
-      query: () => "/players",
+    getPlayers: builder.query<
+      PlayerResponse,
+      { page?: number; limit?: number }
+    >({
+      query: (params = {}) => ({
+        url: "/players",
+        params: {
+          page: params.page || 1,
+          limit: params.limit || 10,
+        },
+      }),
       providesTags: ["Players"],
     }),
 

@@ -103,7 +103,7 @@ const Player: CollectionConfig = {
     {
       name: 'nationality',
       type: 'text',
-      required: true,
+      required: false,
       label: 'Nationality',
     },
     {
@@ -111,6 +111,12 @@ const Player: CollectionConfig = {
       type: 'date',
       required: false,
       label: 'Date of Birth',
+      admin: {
+        date: {
+          pickerAppearance: 'dayOnly', // hides time selection
+          displayFormat: 'yyyy', // optional: shows date only
+        },
+      },
     },
     {
       name: 'height',
@@ -121,7 +127,7 @@ const Player: CollectionConfig = {
         {
           name: 'feet',
           type: 'number',
-          required: true,
+          required: false,
           min: 0,
           max: 8,
           label: 'Feet',
@@ -129,7 +135,7 @@ const Player: CollectionConfig = {
         {
           name: 'inches',
           type: 'number',
-          required: true,
+          required: false,
           min: 0,
           max: 11,
           label: 'Inches',
@@ -145,7 +151,7 @@ const Player: CollectionConfig = {
         {
           name: 'value',
           type: 'number',
-          required: true,
+          required: false,
           min: 0,
           max: 300,
           label: 'Weight (kg)',

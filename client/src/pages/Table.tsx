@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { FaCrown, FaMedal } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 import ErrorMessage from "../components/ErrorMessage";
@@ -166,15 +166,18 @@ const TableRow = ({
     className="transition-all duration-150 cursor-pointer hover:bg-blue-50/60 active:bg-blue-100/30"
   >
     <td className="pl-8 pr-6 py-5 whitespace-nowrap">
-      <div className="flex items-center gap-2">
+      <div
+        className={`flex items-center gap-2 font-semibold text-lg ${
+          team.position === 1
+            ? "text-yellow-400/90"
+            : team.position === 2
+            ? "text-gray-300"
+            : team.position === 3
+            ? "text-amber-600/90"
+            : "text-white"
+        }`}
+      >
         {getPositionBadge(team.position)}
-        {team.position === 1 && (
-          <FaCrown className="text-yellow-400/90 text-lg" />
-        )}
-        {team.position === 2 && <FaMedal className="text-gray-300 text-lg" />}
-        {team.position === 3 && (
-          <FaMedal className="text-amber-600/90 text-lg" />
-        )}
       </div>
     </td>
     <td className="px-6 py-5 whitespace-nowrap">
@@ -186,9 +189,9 @@ const TableRow = ({
               : "/default-team.png"
           }
           alt={team.team?.team_name || "Unknown Team"}
-          className="w-12 h-12 rounded-full object-contain border border-gray-200 bg-white p-0.5"
+          className="w-12 h-12  object-contain  bg-white p-0.5"
         />
-        <span className="font-medium text-gray-800 text-xs sm:text-base">
+        <span className="font-medium text-gray-800 text-base sm:text-base">
           {team.team.team_name}
         </span>
       </div>
@@ -232,24 +235,24 @@ const TableRow = ({
 function getPositionBadge(position: number) {
   if (position === 1)
     return (
-      <span className="w-6 h-6 bg-yellow-400 rounded-full  flex items-center justify-center text-white font-bold">
+      <span className="w-5 h-5 bg-yellow-400 rounded-full  flex items-center justify-center text-white ">
         {position}
       </span>
     );
   if (position <= 3)
     return (
-      <span className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+      <span className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center text-white ">
         {position}
       </span>
     );
   if (position >= 6)
     return (
-      <span className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white font-bold">
+      <span className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white ">
         {position}
       </span>
     );
   return (
-    <span className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center font-bold">
+    <span className="w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center ">
       {position}
     </span>
   );

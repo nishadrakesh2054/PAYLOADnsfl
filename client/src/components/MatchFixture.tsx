@@ -100,24 +100,24 @@ const MatchFixture = () => {
   const getPositionBadge = (position: number) => {
     if (position === 1)
       return (
-        <span className="w-6 h-6 bg-yellow-400 rounded-full  flex items-center justify-center text-white font-bold">
+        <span className="w-5 h-5 bg-yellow-400 rounded-full  flex items-center justify-center text-white ">
           {position}
         </span>
       );
     if (position <= 3)
       return (
-        <span className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+        <span className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center text-white   ">
           {position}
         </span>
       );
     if (position >= 6)
       return (
-        <span className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white font-bold">
+        <span className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white  ">
           {position}
         </span>
       );
     return (
-      <span className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center font-bold">
+      <span className="w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center   ">
         {position}
       </span>
     );

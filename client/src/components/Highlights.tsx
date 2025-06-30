@@ -54,7 +54,7 @@ const Highlights = () => {
               </h2>
 
               <p className="text-md md:text-md text-gray-800 font-medium max-w-2xl mx-auto leading-relaxed mt-8 ">
-                Relive the most exciting moments from recent matches
+              Catch the action you missed — every goal, every cheer.
               </p>
             </div>
 

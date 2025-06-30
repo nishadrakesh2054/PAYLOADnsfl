@@ -19,7 +19,7 @@ import SponserForm from "./components/SponserForm";
 import NewsDetails from "./pages/NewsDetails";
 import NotFound from "./pages/NotFound";
 import Register from "./pages/Register";
-import ScrollToTop from "./components/ScrollToTop";
+// import ScrollToTop from "./components/ScrollToTop";
 import Scroll from "./components/Scroll";
 import Header from "./components/Header";
 import FixtureDetails from "./pages/FixtureDetails";
@@ -50,9 +50,8 @@ function App() {
       <Router>
         <Scroll />
         <div className="min-h-screen bg-gray-100">
-       
           <Header />
-       
+
           <main className="">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -80,7 +79,7 @@ function App() {
           </main>
           <Footer />
         </div>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
       </Router>
       {/* )} */}
     </>

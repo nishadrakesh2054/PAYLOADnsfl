@@ -182,14 +182,14 @@ export interface Player {
   goals?: number | null;
   yellowcards?: number | null;
   redcards?: number | null;
-  nationality: string;
+  nationality?: string | null;
   dateofbirth?: string | null;
-  height: {
-    feet: number;
-    inches: number;
+  height?: {
+    feet?: number | null;
+    inches?: number | null;
   };
-  weight: {
-    value: number;
+  weight?: {
+    value?: number | null;
   };
   team: string | Team;
   updatedAt: string;

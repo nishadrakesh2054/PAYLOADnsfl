@@ -183,9 +183,9 @@ const MainHighlights = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 transition-colors duration-300 group-hover:text-red-600">
                     {highlight.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  {/* <p className="text-gray-600 mb-4 line-clamp-2">
                     {highlight.description.slice(0, 50)}
-                  </p>
+                  </p> */}
 
                   <button
                     onClick={() => setSelectedHighlight(highlight)}

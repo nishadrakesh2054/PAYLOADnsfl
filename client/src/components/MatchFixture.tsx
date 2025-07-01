@@ -97,31 +97,31 @@ const MatchFixture = () => {
     .sort((a, b) => a.matchDate.getTime() - b.matchDate.getTime())
     .slice(0, 4);
 
-  const getPositionBadge = (position: number) => {
-    if (position === 1)
-      return (
-        <span className="w-5 h-5 bg-yellow-400 rounded-full  flex items-center justify-center text-white ">
-          {position}
-        </span>
-      );
-    if (position <= 3)
-      return (
-        <span className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center text-white   ">
-          {position}
-        </span>
-      );
-    if (position >= 6)
-      return (
-        <span className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white  ">
-          {position}
-        </span>
-      );
-    return (
-      <span className="w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center   ">
-        {position}
-      </span>
-    );
-  };
+  //   const getPositionBadge = (position: number) => {
+  //     if (position === 1)
+  //       return (
+  //         <span className="w-5 h-5 bg-yellow-400 rounded-full  flex items-center justify-center text-white ">
+  //           {position}
+  //         </span>
+  //       );
+  //     if (position <= 3)
+  //       return (
+  //         <span className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center text-white   ">
+  //           {position}
+  //         </span>
+  //       );
+  //     if (position >= 6)
+  //       return (
+  //         <span className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white  ">
+  //           {position}
+  //         </span>
+  //       );
+  //     return (
+  //       <span className="w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center   ">
+  //         {position}
+  //       </span>
+  //     );
+  //   };
 
   const renderFormIndicator = (form: string[]) => {
     return (
@@ -167,7 +167,7 @@ const MatchFixture = () => {
                   <table className="w-full">
                     <thead className="bg-gray-100">
                       <tr className="text-left text-sm font-medium text-gray-700">
-                        <th className="p-4 w-12">Position</th>
+                        {/* <th className="p-4 w-12">Position</th> */}
                         <th className="p-4">Team</th>
                         <th className="p-4 text-center w-16">P</th>
                         <th className="p-4 text-center w-16">W</th>
@@ -190,20 +190,20 @@ const MatchFixture = () => {
                             data-aos="fade-up"
                             data-aos-delay={50}
                           >
-                            <td className="pl-8 pr-6 py-5 whitespace-nowrap">
+                            {/* <td className="pl-8 pr-6 py-5 whitespace-nowrap">
                               <div className="flex items-center gap-2">
                                 {getPositionBadge(team.position)}
-                                {/* Icons removed */}
+                            
                               </div>
-                            </td>
+                            </td> */}
                             <td className="p-4">
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center gap-1">
                                 <img
                                   src={`${BASE_URL}/${team.team.team_logo?.url}`}
                                   alt={team.team.team_name}
-                                  className="w-8 h-8 object-contain"
+                                  className="w-12 h-12 object-contain"
                                 />
-                                <span className="font-medium text-gray-800 text-xs sm:text-base">
+                                <span className="text-gray-800 font-normal mr-8 uppercase hover:underline text-xs sm:text-base md:text-md break-words max-w-[100px] sm:max-w-[160px] md:max-w-[220px] ">
                                   {team.team.team_name}
                                 </span>
                               </div>
@@ -308,9 +308,9 @@ const MatchFixture = () => {
                             <img
                               src={match.homeTeam.team_logo}
                               alt={match.homeTeam.team_name}
-                              className="w-10 h-10 object-contain"
+                              className="w-12 h-12 object-contain"
                             />
-                            <span className="font-medium text-gray-800 text-xs sm:text-base">
+                            <span className="text-gray-800 font-medium hover:underline text-sm sm:text-base md:text-md break-words max-w-[100px] sm:max-w-[160px] md:max-w-[220px] uppercase">
                               {match.homeTeam.team_name}
                             </span>
                           </div>
@@ -322,9 +322,9 @@ const MatchFixture = () => {
                             <img
                               src={match.awayTeam.team_logo}
                               alt={match.awayTeam.team_name}
-                              className="w-10 h-10 object-contain"
+                              className="w-12 h-12 object-contain"
                             />
-                            <span className="font-medium text-gray-800 text-xs sm:text-base">
+                            <span className="text-gray-800 font-medium hover:underline text-sm sm:text-base md:text-md break-words max-w-[100px] sm:max-w-[160px] md:max-w-[220px] uppercase">
                               {match.awayTeam.team_name}
                             </span>
                           </div>

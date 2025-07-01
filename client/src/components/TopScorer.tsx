@@ -154,7 +154,7 @@ const TableRow: React.FC<{
       <PlayerCell player={player} onImageError={onImageError} />
       <TeamCell player={player} onImageError={onImageError} />
 
-      <td className="px-6 py-2 font-medium text-gray-700 text-center text-capitalize">
+      <td className="px-6  py-2 text-gray-700 font-normal hover:underline text-sm sm:text-base md:text-md break-words  capitalize">
         {player.position || "-"}
       </td>
 
@@ -181,10 +181,10 @@ const PlayerCell: React.FC<{
   player: any;
   onImageError: (e: React.SyntheticEvent<HTMLImageElement>) => void;
 }> = memo(({ player, onImageError }) => (
-  <td className="px-6 py-2">
+  <td className=" py-2 ">
     <Link
       to={`/teams/${player.team?.id}/players/${player.id}`}
-      className="flex items-center gap-3"
+      className="flex items-center gap-1"
     >
       <img
         src={player.playerImg}
@@ -194,7 +194,7 @@ const PlayerCell: React.FC<{
         onError={onImageError}
         loading="lazy"
       />
-      <span className="font-semibold text-gray-900 hover:underline text-base sm:text-base text-capitalize">
+      <span className="text-gray-700 font-normal hover:underline text-sm sm:text-base md:text-md break-words max-w-[100px] sm:max-w-[160px] md:max-w-[220px] ">
         {player.name}
       </span>
     </Link>
@@ -206,11 +206,11 @@ const TeamCell: React.FC<{
   player: any;
   onImageError: (e: React.SyntheticEvent<HTMLImageElement>) => void;
 }> = memo(({ player, onImageError }) => (
-  <td className="px-6 py-2">
-    <div className="flex items-center gap-2">
+  <td className="px-8 py-2 ">
+    <div className="flex items-center ">
       <Link
         to={`/teams/${player.team?.id}`}
-        className="flex items-center gap-2"
+        className="flex items-center gap-1"
       >
         <img
           src={player.teamLogo}
@@ -220,9 +220,10 @@ const TeamCell: React.FC<{
           onError={onImageError}
           loading="lazy"
         />
-        <span className="text-gray-700 font-medium hover:underline text-capitalize">
-          {player.team?.team_name || "Unknown Team"}
-        </span>
+       <span className="text-gray-800 font-normal uppercase hover:underline text-xs sm:text-base md:text-md break-words max-w-[100px] sm:max-w-[160px] md:max-w-[220px] ">
+  {player.team?.team_name || "UNKNOWN TEAM"}
+</span>
+
       </Link>
     </div>
   </td>
@@ -231,7 +232,7 @@ const TeamCell: React.FC<{
 // Stat Cell Component
 const StatCell: React.FC<{ value: number | string; className?: string }> = memo(
   ({ value, className = "" }) => (
-    <td className={`px-6 py-2 text-center ${className}`}>{value}</td>
+    <td className={`px-6 py-2 text-center  ${className}`}>{value}</td>
   )
 );
 

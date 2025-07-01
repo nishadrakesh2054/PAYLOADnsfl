@@ -103,9 +103,9 @@ const LeagueTable = ({
   <table className="min-w-full divide-y divide-gray-200">
     <thead className="bg-black">
       <tr>
-        <th className="pl-8 pr-6 py-4 text-left text-xs font-medium uppercase tracking-wider text-white">
+        {/* <th className="pl-8 pr-6 py-4 text-left text-xs font-medium uppercase tracking-wider text-white">
           Position
-        </th>
+        </th> */}
         <th className="px-6 py-4 text-left text-xs font-medium uppercase tracking-wider text-white">
           Team
         </th>
@@ -165,7 +165,7 @@ const TableRow = ({
     onClick={() => handleRowClick(team.team.id)}
     className="transition-all duration-150 cursor-pointer hover:bg-blue-50/60 active:bg-blue-100/30"
   >
-    <td className="pl-8 pr-6 py-5 whitespace-nowrap">
+    {/* <td className="pl-8 pr-6 py-5 whitespace-nowrap">
       <div
         className={`flex items-center gap-2 font-semibold text-lg ${
           team.position === 1
@@ -179,7 +179,7 @@ const TableRow = ({
       >
         {getPositionBadge(team.position)}
       </div>
-    </td>
+    </td> */}
     <td className="px-6 py-5 whitespace-nowrap">
       <div className="flex items-center gap-3">
         <img

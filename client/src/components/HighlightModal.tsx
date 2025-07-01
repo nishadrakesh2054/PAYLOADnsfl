@@ -19,7 +19,7 @@ const HighlightModal: React.FC<HighlightModalProps> = ({
         >
           {/* Close Button */}
           <button
-            className="absolute top-3 right-3 bg-red-600 text-white rounded-full p-3 hover:bg-red-700 transition-all duration-200 z-50"
+            className="absolute top-1 right-1 bg-red-600 text-white rounded-full p-1 hover:bg-red-700 transition-all duration-200 z-50"
             onClick={(e) => {
               e.stopPropagation();
               onClose();
@@ -40,11 +40,11 @@ const HighlightModal: React.FC<HighlightModalProps> = ({
           </div>
 
           {/* Highlight Info */}
-          <div className="p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-3">
+          <div className="p-2">
+            <h2 className="text-md font-bold text-gray-800 mb-3">
               {highlight.title}
             </h2>
-            <p className="text-gray-600 mb-4">{highlight.description}</p>
+            {/* <p className="text-gray-600 mb-4">{highlight.description}</p> */}
             <span className="text-sm text-gray-500">
               Duration: {highlight.duration}
             </span>

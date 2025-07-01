@@ -60,12 +60,12 @@ const Highlight: CollectionConfig = {
       defaultValue: 'Untitled',
       label: 'Title',
     },
-    {
-      name: 'description',
-      type: 'textarea',
-      required: true,
-      label: 'Description',
-    },
+    // {
+    //   name: 'description',
+    //   type: 'textarea',
+    //   required: true,
+    //   label: 'Description',
+    // },
     {
       name: 'image',
       type: 'upload',

@@ -275,7 +275,6 @@ export interface Blog {
 export interface Highlight {
   id: string;
   title: string;
-  description: string;
   image?: (string | null) | Media;
   views?: number | null;
   duration?: string | null;
@@ -557,7 +556,6 @@ export interface BlogsSelect<T extends boolean = true> {
  */
 export interface HighlightsSelect<T extends boolean = true> {
   title?: T;
-  description?: T;
   image?: T;
   views?: T;
   duration?: T;

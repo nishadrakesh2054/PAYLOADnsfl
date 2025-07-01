@@ -126,14 +126,14 @@ const Highlights = () => {
                   {/* Content section */}
                   <div className="p-6 transition-all duration-300 group-hover:bg-gray-50">
                     <h3
-                      className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 
+                      className="text-md font-bold text-gray-900 mb-2 line-clamp-2 
             transition-colors duration-300 group-hover:text-red-600"
                     >
                       {highlight.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-2 font-poppins">
+                    {/* <p className="text-gray-600 mb-4 line-clamp-2 font-poppins">
                       {highlight.description.slice(0, 50)}...
-                    </p>
+                    </p> */}
                     <button
                       onClick={() => setSelectedHighlight(highlight)}
                       className="w-full py-3 bg-gray-100 hover:bg-red-500 hover:text-white 

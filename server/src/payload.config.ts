@@ -29,21 +29,29 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    meta: {
+        titleSuffix: ' - Nsfl Admin',
+        description: 'The best Football in the NEPAL',
+        icons: [
+          {
+            rel: 'icon',
+            type: 'image/png',
+            url: '/nsflicon.png',
+          },
+        ],
+      },
     components: {
-      //   logout: {
-      //     Button: '../src/components/Logout.jsx#Logout',
-      //   },
+
       Nav: '../src/components/Nav.tsx',
       graphics: {
         Icon: '../src/components/NsflLogo.tsx',
         Logo: '../src/components/NsflBiglogo.tsx',
       },
       header: ['../src/components/Header.tsx'],
-      //   beforeDashboard: ['../src/components/BeforeDashboard.tsx'],
-      //   afterDashboard: ['../src/components/AfterDashboard.tsx'],
+
     },
   },
-  cors: ['http://localhost:5173'], // Vite development server port
+  cors: ['http://localhost:5173'], 
   collections: [
     Team,
     Player,

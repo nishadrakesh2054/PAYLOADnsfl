@@ -221,7 +221,6 @@ export interface Table {
 export interface Match {
   id: string;
   match_date: string;
-  time: string;
   homeTeam: string | Team;
   homePlayers?: (string | Player)[] | null;
   awayTeam: string | Team;
@@ -294,7 +293,6 @@ export interface Watchlive {
   videoUrl: string;
   videoId?: string | null;
   isActive: boolean;
-  match: string | Match;
   updatedAt: string;
   createdAt: string;
 }
@@ -518,7 +516,6 @@ export interface TablesSelect<T extends boolean = true> {
  */
 export interface MatchesSelect<T extends boolean = true> {
   match_date?: T;
-  time?: T;
   homeTeam?: T;
   homePlayers?: T;
   awayTeam?: T;
@@ -574,7 +571,6 @@ export interface WatchliveSelect<T extends boolean = true> {
   videoUrl?: T;
   videoId?: T;
   isActive?: T;
-  match?: T;
   updatedAt?: T;
   createdAt?: T;
 }

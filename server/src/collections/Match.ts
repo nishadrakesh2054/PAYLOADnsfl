@@ -34,14 +34,14 @@ const Match: CollectionConfig = {
       admin: {
         date: {
           pickerAppearance: 'dayAndTime', 
-          displayFormat: 'yyyy-MM-dd',        },
+          displayFormat: 'yyyy-MM-dd HH:mm',     },
       },
     },
-    {
-      name: 'time',
-      type: 'text', // Payload has no TIME type, so store as string (e.g., 'HH:mm:ss')
-      required: true,
-    },
+    // {
+    //   name: 'time',
+    //   type: 'text', // Payload has no TIME type, so store as string (e.g., 'HH:mm:ss')
+    //   required: true,
+    // },
     {
       name: 'homeTeam',
       type: 'relationship',

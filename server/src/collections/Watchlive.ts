@@ -65,13 +65,13 @@ const Watchlive: CollectionConfig = {
       required: true,
       label: 'Active Status',
     },
-    {
-      name: 'match',
-      type: 'relationship',
-      relationTo: 'matches',
-      required: true,
-      label: 'Match',
-    },
+    // {
+    //   name: 'match',
+    //   type: 'relationship',
+    //   relationTo: 'matches',
+    //   required: true,
+    //   label: 'Match',
+    // },
   ],
 }
 
